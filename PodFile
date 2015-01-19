@@ -1,0 +1,15 @@
+platform :ios, '8.1'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+def import_pods
+	pod 'ManagedObjectKeyValueParser', :git => 'https://github.com/trickysquirrel/ManagedObjectKeyValueParser.git'
+end
+
+target :'TSCoreDataStore' do
+	import_pods
+end
+
+target :'TSCoreDataStoreTests' do
+    pod 'OCMock', '~> 2.2.1'
+end
